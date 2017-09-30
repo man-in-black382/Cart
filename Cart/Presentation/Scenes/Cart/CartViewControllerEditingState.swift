@@ -8,14 +8,17 @@
 
 import Foundation
 
-class CartViewControllerEditingStrategy: CartViewControllerStrategyType {
+class CartViewControllerEditingState: CartViewControllerState {
     
-    func updateUI(_ cartVC: CartViewController) {
-        
+    func enter(_ cartVC: CartViewController) {
+        cartVC.leftBarButton.state = .cancel
+        cartVC.rightBarButton.state = .apply
+        cartVC.tableManager.isInEditingMode = true
     }
     
     func performLeftBarButtonAction(_ cartVC: CartViewController) {
-        
+        cartVC.state = CartViewControllerBrowsingState()
+        cartVC.state.enter(cartVC)
     }
     
     func performRightBarButtonAction(_ cartVC: CartViewController) {

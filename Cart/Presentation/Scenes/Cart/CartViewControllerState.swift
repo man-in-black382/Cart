@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol CartViewControllerStrategyType {
-    func updateUI(_ cartVC: CartViewController)
+protocol CartViewControllerState {
+    func enter(_ cartVC: CartViewController)
     func performLeftBarButtonAction(_ cartVC: CartViewController)
     func performRightBarButtonAction(_ cartVC: CartViewController)
 }

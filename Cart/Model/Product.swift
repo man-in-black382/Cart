@@ -25,10 +25,10 @@ class Product: Decodable {
     
     // MARK: - Properties
     
-    var id: Int
-    var title: String
-    var currentPrice: String
-    var oldPrice: String?
+    let id: Int
+    let title: String
+    let currentPrice: Double
+    let oldPrice: Double?
     
     private let thumbanilURL: URL
     private let thumbnailCache = NSCache<NSString, UIImage>()
@@ -41,9 +41,13 @@ class Product: Decodable {
 
         id = try container.decode(Int.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
-        currentPrice = try container.decode(String.self, forKey: .currentPrice)
-        oldPrice = try container.decode(String?.self, forKey: .oldPrice)
         thumbanilURL = try container.decode(URL.self, forKey: .thumbanilURL)
+        
+        let currentPriceString = try container.decode(String.self, forKey: .currentPrice)
+        let oldPriceString = try container.decode(String?.self, forKey: .oldPrice)
+        
+        currentPrice = Double(currentPriceString) ?? 0.0
+        oldPrice = Double(oldPriceString ?? "")
     }
     
     // MARK: - Private
@@ -51,9 +55,11 @@ class Product: Decodable {
     private func loadThumbnail(_ completionHandler: @escaping ThumbnailCallback) {
         guard downloadQueue.operationCount == 0 else { return }
         downloadQueue.addOperation { [weak self] in
-            guard let strongSelf = self,
+            guard
+                let strongSelf = self,
                 let thumbnailData = try? Data(contentsOf: strongSelf.thumbanilURL),
-                let thumbnail = UIImage(data: thumbnailData) else { return }
+                let thumbnail = UIImage(data: thumbnailData)
+            else { return }
             
             strongSelf.thumbnailCache.setObject(thumbnail, forKey: strongSelf.thumbanilURL.absoluteString as NSString)
             completionHandler(thumbnail, strongSelf, false)

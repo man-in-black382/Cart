@@ -22,7 +22,7 @@ class CartBarButtonItem: UIBarButtonItem {
         var localizedTitle: String {
             switch self {
             case .add: return "Добавить"
-            case .edit: return "Редактировать"
+            case .edit: return "Редакт."
             case .cancel: return "Отменить"
             case .apply: return "Применить"
             case .idle: return ""
