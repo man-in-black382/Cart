@@ -76,7 +76,7 @@
                                                         <constraint firstAttribute="width" constant="80" id="njq-kn-vig"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название модель 1043" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6v-Qv-h0l" userLabel="Title Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Название модель 1043" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6v-Qv-h0l" userLabel="Title Label">
                                                     <rect key="frame" x="96" y="8" width="238" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.3529411764705882" green="0.5490196078431373" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,13 +85,13 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXY-Fi-Z3Z" userLabel="Prices View">
                                                     <rect key="frame" x="96" y="36.5" width="121" height="50.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 999 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HXv-R1-m3O" userLabel="Old Price Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="19 999 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HXv-R1-m3O" userLabel="Old Price Label">
                                                             <rect key="frame" x="0.0" y="0.0" width="121" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                             <color key="textColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 999 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XMP-Rd-w7o" userLabel="Current Price Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="16 999 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XMP-Rd-w7o" userLabel="Current Price Label">
                                                             <rect key="frame" x="0.0" y="21.5" width="121" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                             <nil key="textColor"/>
@@ -112,7 +112,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9SB-YT-kcF" userLabel="Multiplier View">
                                                     <rect key="frame" x="232" y="47" width="102" height="30"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojc-EW-u5n" userLabel="Decrement Button">
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojc-EW-u5n" userLabel="Decrement Button">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                             <color key="tintColor" red="0.61568627450980395" green="0.81176470588235294" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                             <state key="normal" title="-">
@@ -122,13 +122,13 @@
                                                                 <action selector="decrementPressed" destination="8ok-0l-cmz" eventType="touchUpInside" id="Z3A-SD-mi8"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="шт." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh6-Ef-e1D" userLabel="PC Label">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="шт." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Vh6-Ef-e1D" userLabel="PC Label">
                                                             <rect key="frame" x="38" y="0.0" width="26" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKE-FI-iIc" userLabel="Increment Button">
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKE-FI-iIc" userLabel="Increment Button">
                                                             <rect key="frame" x="72" y="0.0" width="30" height="30"/>
                                                             <color key="tintColor" red="0.61568627450980395" green="0.81176470588235294" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                             <state key="normal" title="+">
@@ -156,13 +156,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="EXY-Fi-Z3Z" firstAttribute="leading" secondItem="qHs-46-WhR" secondAttribute="trailing" constant="8" id="23S-Xk-eDv"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qHs-46-WhR" secondAttribute="bottom" constant="16" id="5MC-6c-ccB"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qHs-46-WhR" secondAttribute="bottom" priority="999" constant="16" id="5MC-6c-ccB"/>
                                                 <constraint firstAttribute="trailing" secondItem="9SB-YT-kcF" secondAttribute="trailing" constant="8" id="6Bn-dZ-l6q"/>
                                                 <constraint firstAttribute="trailing" secondItem="i6v-Qv-h0l" secondAttribute="trailing" constant="8" id="7H8-TZ-19g"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EXY-Fi-Z3Z" secondAttribute="bottom" constant="16" id="Gbm-LD-hCn"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EXY-Fi-Z3Z" secondAttribute="bottom" priority="999" constant="16" id="Gbm-LD-hCn"/>
                                                 <constraint firstItem="i6v-Qv-h0l" firstAttribute="top" secondItem="5qC-fc-5Pd" secondAttribute="top" constant="8" id="JVX-KN-eVg"/>
                                                 <constraint firstItem="9SB-YT-kcF" firstAttribute="centerY" secondItem="EXY-Fi-Z3Z" secondAttribute="centerY" id="QfG-4H-hQb"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9SB-YT-kcF" secondAttribute="bottom" constant="16" id="REu-QQ-u9u"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9SB-YT-kcF" secondAttribute="bottom" priority="999" constant="16" id="REu-QQ-u9u"/>
                                                 <constraint firstItem="qHs-46-WhR" firstAttribute="top" secondItem="5qC-fc-5Pd" secondAttribute="top" constant="8" id="RLL-3v-kXw"/>
                                                 <constraint firstItem="EXY-Fi-Z3Z" firstAttribute="top" secondItem="i6v-Qv-h0l" secondAttribute="bottom" constant="8" id="bSc-y3-URh"/>
                                                 <constraint firstItem="i6v-Qv-h0l" firstAttribute="leading" secondItem="qHs-46-WhR" secondAttribute="trailing" constant="8" id="cAu-EI-ZHh"/>
@@ -174,6 +174,7 @@
                                             <outlet property="currentPriceLabel" destination="XMP-Rd-w7o" id="MgJ-OG-I1a"/>
                                             <outlet property="decrementButton" destination="Ojc-EW-u5n" id="S1M-XM-5tO"/>
                                             <outlet property="incrementButton" destination="cKE-FI-iIc" id="wE5-bj-TS9"/>
+                                            <outlet property="multiplierTrailingConstraint" destination="6Bn-dZ-l6q" id="YvL-hJ-nZZ"/>
                                             <outlet property="multiplierView" destination="9SB-YT-kcF" id="Jox-CZ-lXF"/>
                                             <outlet property="oldPriceLabel" destination="HXv-R1-m3O" id="3AD-4K-UkM"/>
                                             <outlet property="pcLabel" destination="Vh6-Ef-e1D" id="JAD-qb-4t3"/>
@@ -188,7 +189,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 товара на сумму:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1Z-ZE-c2m" userLabel="Product Counter Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 товара на сумму:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d1Z-ZE-c2m" userLabel="Product Counter Label">
                                                     <rect key="frame" x="16" y="0.0" width="154" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="YcB-NX-hnn"/>
@@ -197,7 +198,7 @@
                                                     <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78 789 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qE-TV-pCS" userLabel="Total Amount Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78 789 грн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8qE-TV-pCS" userLabel="Total Amount Label">
                                                     <rect key="frame" x="235" y="0.0" width="124" height="56"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -276,15 +277,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dataManager" destination="0qJ-WD-WnW" id="fdY-Zs-qcI"/>
                         <outlet property="emptyCartView" destination="Uyy-WX-mZv" id="QeH-HH-We2"/>
                         <outlet property="leftBarButton" destination="Bhj-DV-naL" id="nAn-iJ-xAg"/>
                         <outlet property="rightBarButton" destination="zgX-M7-QfF" id="8Vl-rZ-utU"/>
-                        <outlet property="tableManager" destination="0qJ-WD-WnW" id="fdY-Zs-qcI"/>
                         <outlet property="tableView" destination="enI-iw-gXi" id="b9J-1e-iN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="0qJ-WD-WnW" customClass="CartDataManager" customModule="Cart" customModuleProvider="target">
+                <customObject id="0qJ-WD-WnW" customClass="CartTableDataManager" customModule="Cart" customModuleProvider="target">
                     <connections>
                         <outlet property="tableView" destination="enI-iw-gXi" id="I9B-ah-0gD"/>
                     </connections>

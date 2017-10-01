@@ -17,7 +17,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var rightBarButton: CartBarButtonItem!
     @IBOutlet weak var emptyCartView: UIView!
     
-    @IBOutlet var tableManager: CartDataManager!
+    @IBOutlet var dataManager: CartTableDataManager!
     
     // MARK: - Properties
     
@@ -31,7 +31,7 @@ class CartViewController: UIViewController {
 
         setupUI()
         state.enter(self)
-        tableManager.delegate = self
+        dataManager.delegate = self
     }
     
 }
@@ -51,29 +51,20 @@ extension CartViewController {
 extension CartViewController {
     private func setupUI() {
         tableView.tableFooterView = UIView()
+        tableView.estimatedSectionHeaderHeight = 100
+        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 500
+        tableView.rowHeight = UITableViewAutomaticDimension
         view.bringSubview(toFront: emptyCartView)
     }
 }
 
 // MARK: - CartTableManagerDelegate
 extension CartViewController: CartDataManagerDelegate {
-    func cartDataManager(_ manager: CartDataManager, willDeleteProductAt index: Int) {
-        productPool.putProductBack(manager.multipliableProducts[index].product)
-    }
-    
-    func cartDataManager(_ manager: CartDataManager, didDeleteProductAt index: Int) {
+    func cartDataManager(_ manager: CartTableDataManager, didRemove product: Product, at index: Int) {
+        productPool.putProductBack(product)
         if manager.multipliableProducts.isEmpty {
             emptyCartView.fadeIn()
         }
-    }
-    
-    func cartDataManager(_ manager: CartDataManager, didAskToDecrementAt index: Int) {
-        let newValue = manager.multipliableProducts[index].multiplier - 1
-        guard newValue > 0 else { return }
-        manager.setMultiplier(newValue, forProductAt: index)
-    }
-    
-    func cartDataManager(_ manager: CartDataManager, didAskToIncrementAt index: Int) {
-        manager.setMultiplier(manager.multipliableProducts[index].multiplier + 1, forProductAt: index)
     }
 }

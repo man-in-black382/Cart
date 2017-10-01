@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITableView {
-    func updateSafely(_ action: () -> ()) {
+    func batchUpdates(_ action: () -> ()) {
         beginUpdates()
         action()
         endUpdates()

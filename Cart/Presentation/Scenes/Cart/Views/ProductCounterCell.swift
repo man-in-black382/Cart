@@ -33,8 +33,8 @@ class ProductCounterCell: UITableViewCell {
             return (count, sum)
         }
         
-        let plural = NSLocalizedString("numberOfProducts", comment: "")
-        counterLabel.text = "\(count) \(plural) на сумму:"
+        let plural = String.localizedStringWithFormat(NSLocalizedString("numberOfProducts", comment: ""), count)
+        counterLabel.text = "\(plural) на сумму:"
         
         if let priceFormatted = NumberFormatter.priceFormatter.string(from: NSNumber(value: sum)) {
             amountLabel.text = "\(priceFormatted) грн"

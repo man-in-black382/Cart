@@ -21,6 +21,8 @@ class ProductCell: UITableViewCell {
     @IBOutlet private weak var decrementButton: UIButton!
     @IBOutlet private weak var incrementButton: UIButton!
     
+    @IBOutlet private weak var multiplierTrailingConstraint: NSLayoutConstraint!
+    
     // MARK: - Properties
     
     private let oldPriceAttributes: [NSAttributedStringKey: Any] = [
@@ -117,6 +119,7 @@ extension ProductCell {
     func setMultiplierViewHidden(_ hidden: Bool, animated: Bool) {
         if !animated {
             multiplierView.isHidden = hidden
+            multiplierView.alpha = hidden ? 0.0 : 1.0
         } else {
             hidden ? multiplierView.fadeOut() : multiplierView.fadeIn()
         }

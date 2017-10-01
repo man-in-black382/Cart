@@ -78,7 +78,11 @@ class Product: Decodable {
 }
 
 // MARK: - Equatable
-extension Product: Equatable {
+extension Product: Hashable {
+    var hashValue: Int {
+        return id
+    }
+    
     static func ==(lhs: Product, rhs: Product) -> Bool {
         return lhs.id == rhs.id
     }

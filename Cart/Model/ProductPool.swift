@@ -44,4 +44,8 @@ class ProductPool {
         products.append(product)
     }
     
+    func putProductsBack(_ products: [Product]) {
+        self.products.append(contentsOf: products)
+    }
+    
 }

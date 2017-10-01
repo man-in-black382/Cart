@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0E5B391F8116B300FE278F /* CATransaction+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E5B381F8116B300FE278F /* CATransaction+Convenience.swift */; };
 		CE243CE81F7E66F800D89794 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CE71F7E66F800D89794 /* ProductCell.swift */; };
-		CE243CEA1F7E675F00D89794 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CE91F7E675F00D89794 /* CartDataManager.swift */; };
+		CE243CEA1F7E675F00D89794 /* CartTableDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CE91F7E675F00D89794 /* CartTableDataManager.swift */; };
 		CE243CEC1F7E714900D89794 /* ProductCounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CEB1F7E714900D89794 /* ProductCounterCell.swift */; };
 		CE243CEE1F7E72D300D89794 /* CartBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CED1F7E72D300D89794 /* CartBarButtonItem.swift */; };
 		CE243CF21F7E7B0600D89794 /* CartViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CF11F7E7B0600D89794 /* CartViewControllerState.swift */; };
 		CE243CF41F7E7B9D00D89794 /* CartViewControllerBrowsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CF31F7E7B9D00D89794 /* CartViewControllerBrowsingState.swift */; };
 		CE243CF61F7E7BAA00D89794 /* CartViewControllerEditingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE243CF51F7E7BAA00D89794 /* CartViewControllerEditingState.swift */; };
 		CE243CF71F7E85A100D89794 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8A771A1F7E44F60081F22A /* products.json */; };
-		CE54496B1F7FAC5C0072AC57 /* MultipliableProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54496A1F7FAC5C0072AC57 /* MultipliableProduct.swift */; };
-		CE54496D1F7FB10B0072AC57 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = CE54496C1F7FB10B0072AC57 /* Localizable.stringsdict */; };
 		CE54496F1F7FB6210072AC57 /* UITableView+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54496E1F7FB6210072AC57 /* UITableView+Convenience.swift */; };
 		CE5449711F7FB6B60072AC57 /* ProductCounterHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5449701F7FB6B60072AC57 /* ProductCounterHeader.swift */; };
 		CE5449731F7FB6C40072AC57 /* ProductCounterHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5449721F7FB6C40072AC57 /* ProductCounterHeader.xib */; };
@@ -26,6 +25,8 @@
 		CE8A77201F7E636B0081F22A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A771F1F7E636B0081F22A /* CartViewController.swift */; };
 		CE9D45121F7EAF960080021A /* NumberFormatter+CustomFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D45111F7EAF960080021A /* NumberFormatter+CustomFormatters.swift */; };
 		CE9D45141F7EBCFD0080021A /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D45131F7EBCFD0080021A /* UIView+Animations.swift */; };
+		CEAC81301F80EDB800A049CA /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = CEAC81321F80EDB800A049CA /* Localizable.stringsdict */; };
+		CEAC81331F80EDBC00A049CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEAC81351F80EDBC00A049CA /* Localizable.strings */; };
 		CEE22D761F7D292200408EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE22D751F7D292200408EC9 /* AppDelegate.swift */; };
 		CEE22D7B1F7D292200408EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE22D791F7D292200408EC9 /* Main.storyboard */; };
 		CEE22D7D1F7D292200408EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE22D7C1F7D292200408EC9 /* Assets.xcassets */; };
@@ -34,15 +35,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0E5B381F8116B300FE278F /* CATransaction+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CATransaction+Convenience.swift"; sourceTree = "<group>"; };
 		CE243CE71F7E66F800D89794 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		CE243CE91F7E675F00D89794 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
+		CE243CE91F7E675F00D89794 /* CartTableDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableDataManager.swift; sourceTree = "<group>"; };
 		CE243CEB1F7E714900D89794 /* ProductCounterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCounterCell.swift; sourceTree = "<group>"; };
 		CE243CED1F7E72D300D89794 /* CartBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBarButtonItem.swift; sourceTree = "<group>"; };
 		CE243CF11F7E7B0600D89794 /* CartViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewControllerState.swift; sourceTree = "<group>"; };
 		CE243CF31F7E7B9D00D89794 /* CartViewControllerBrowsingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewControllerBrowsingState.swift; sourceTree = "<group>"; };
 		CE243CF51F7E7BAA00D89794 /* CartViewControllerEditingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewControllerEditingState.swift; sourceTree = "<group>"; };
-		CE54496A1F7FAC5C0072AC57 /* MultipliableProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipliableProduct.swift; sourceTree = "<group>"; };
-		CE54496C1F7FB10B0072AC57 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		CE54496E1F7FB6210072AC57 /* UITableView+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Convenience.swift"; sourceTree = "<group>"; };
 		CE5449701F7FB6B60072AC57 /* ProductCounterHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCounterHeader.swift; sourceTree = "<group>"; };
 		CE5449721F7FB6C40072AC57 /* ProductCounterHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCounterHeader.xib; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		CE8A771F1F7E636B0081F22A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		CE9D45111F7EAF960080021A /* NumberFormatter+CustomFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+CustomFormatters.swift"; sourceTree = "<group>"; };
 		CE9D45131F7EBCFD0080021A /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		CEAC81311F80EDB800A049CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		CEAC81341F80EDBC00A049CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEE22D721F7D292200408EC9 /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE22D751F7D292200408EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE22D7A1F7D292200408EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +94,7 @@
 				CE243CF11F7E7B0600D89794 /* CartViewControllerState.swift */,
 				CE243CF31F7E7B9D00D89794 /* CartViewControllerBrowsingState.swift */,
 				CE243CF51F7E7BAA00D89794 /* CartViewControllerEditingState.swift */,
-				CE243CE91F7E675F00D89794 /* CartDataManager.swift */,
+				CE243CE91F7E675F00D89794 /* CartTableDataManager.swift */,
 				CE243CE41F7E66CD00D89794 /* Views */,
 			);
 			path = Cart;
@@ -105,6 +107,7 @@
 				CE8A771C1F7E62CB0081F22A /* AlertFacade+Convenience.swift */,
 				CE9D45131F7EBCFD0080021A /* UIView+Animations.swift */,
 				CE54496E1F7FB6210072AC57 /* UITableView+Convenience.swift */,
+				CE0E5B381F8116B300FE278F /* CATransaction+Convenience.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				CEE22D931F7D321600408EC9 /* Product.swift */,
-				CE54496A1F7FAC5C0072AC57 /* MultipliableProduct.swift */,
 				CE8A77161F7E38B20081F22A /* ProductPool.swift */,
 			);
 			path = Model;
@@ -167,12 +169,13 @@
 		CEE22D9B1F7D39A600408EC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CE8A771A1F7E44F60081F22A /* products.json */,
 				CEE22D791F7D292200408EC9 /* Main.storyboard */,
 				CEE22D7C1F7D292200408EC9 /* Assets.xcassets */,
 				CEE22D7E1F7D292200408EC9 /* LaunchScreen.storyboard */,
 				CEE22D811F7D292200408EC9 /* Info.plist */,
-				CE54496C1F7FB10B0072AC57 /* Localizable.stringsdict */,
+				CE8A771A1F7E44F60081F22A /* products.json */,
+				CEAC81321F80EDB800A049CA /* Localizable.stringsdict */,
+				CEAC81351F80EDBC00A049CA /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -239,8 +242,9 @@
 				CEE22D801F7D292200408EC9 /* LaunchScreen.storyboard in Resources */,
 				CE5449731F7FB6C40072AC57 /* ProductCounterHeader.xib in Resources */,
 				CE243CF71F7E85A100D89794 /* products.json in Resources */,
+				CEAC81331F80EDBC00A049CA /* Localizable.strings in Resources */,
 				CEE22D7D1F7D292200408EC9 /* Assets.xcassets in Resources */,
-				CE54496D1F7FB10B0072AC57 /* Localizable.stringsdict in Resources */,
+				CEAC81301F80EDB800A049CA /* Localizable.stringsdict in Resources */,
 				CEE22D7B1F7D292200408EC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8A77191F7E395A0081F22A /* AlertFacade.swift in Sources */,
+				CE0E5B391F8116B300FE278F /* CATransaction+Convenience.swift in Sources */,
 				CE243CEE1F7E72D300D89794 /* CartBarButtonItem.swift in Sources */,
 				CE243CF21F7E7B0600D89794 /* CartViewControllerState.swift in Sources */,
 				CEE22D761F7D292200408EC9 /* AppDelegate.swift in Sources */,
@@ -262,11 +267,10 @@
 				CE9D45121F7EAF960080021A /* NumberFormatter+CustomFormatters.swift in Sources */,
 				CEE22D941F7D321600408EC9 /* Product.swift in Sources */,
 				CE9D45141F7EBCFD0080021A /* UIView+Animations.swift in Sources */,
-				CE54496B1F7FAC5C0072AC57 /* MultipliableProduct.swift in Sources */,
 				CE243CE81F7E66F800D89794 /* ProductCell.swift in Sources */,
 				CE243CF41F7E7B9D00D89794 /* CartViewControllerBrowsingState.swift in Sources */,
 				CE243CF61F7E7BAA00D89794 /* CartViewControllerEditingState.swift in Sources */,
-				CE243CEA1F7E675F00D89794 /* CartDataManager.swift in Sources */,
+				CE243CEA1F7E675F00D89794 /* CartTableDataManager.swift in Sources */,
 				CE5449711F7FB6B60072AC57 /* ProductCounterHeader.swift in Sources */,
 				CE8A77201F7E636B0081F22A /* CartViewController.swift in Sources */,
 				CE8A77171F7E38B20081F22A /* ProductPool.swift in Sources */,
@@ -276,6 +280,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CEAC81321F80EDB800A049CA /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEAC81311F80EDB800A049CA /* en */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		CEAC81351F80EDBC00A049CA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEAC81341F80EDBC00A049CA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CEE22D791F7D292200408EC9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

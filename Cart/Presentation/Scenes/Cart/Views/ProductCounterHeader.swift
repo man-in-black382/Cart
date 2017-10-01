@@ -9,7 +9,8 @@
 import UIKit
 
 class ProductCounterHeader: UITableViewHeaderFooterView {
-    
-    
+
+    // Nothing to do here
     
 }
+

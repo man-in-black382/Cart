@@ -33,7 +33,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="shw-UY-sx5" firstAttribute="top" secondItem="GEd-Oo-fsi" secondAttribute="top" id="eMn-Fo-Gg0"/>
                         <constraint firstAttribute="bottom" secondItem="YvV-2n-ofV" secondAttribute="bottom" constant="8" id="fCw-Ny-bZa"/>
@@ -44,7 +44,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="GEd-Oo-fsi" secondAttribute="bottom" id="1Jt-Jo-cvQ"/>
                 <constraint firstItem="GEd-Oo-fsi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2ac-ly-FxQ"/>

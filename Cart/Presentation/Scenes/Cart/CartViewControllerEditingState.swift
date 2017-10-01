@@ -13,16 +13,23 @@ class CartViewControllerEditingState: CartViewControllerState {
     func enter(_ cartVC: CartViewController) {
         cartVC.leftBarButton.state = .cancel
         cartVC.rightBarButton.state = .apply
-        cartVC.tableManager.isInEditingMode = true
+        cartVC.dataManager.toggleEditingModeOn()
     }
     
     func performLeftBarButtonAction(_ cartVC: CartViewController) {
+        _ = cartVC.dataManager.discardEditModeChanges()
         cartVC.state = CartViewControllerBrowsingState()
         cartVC.state.enter(cartVC)
     }
     
     func performRightBarButtonAction(_ cartVC: CartViewController) {
-        
+        let deletedProducts = cartVC.dataManager.commitEditModeChanges()
+        if cartVC.dataManager.multipliableProducts.isEmpty {
+            cartVC.emptyCartView.fadeIn()
+        }
+        cartVC.productPool.putProductsBack(deletedProducts)
+        cartVC.state = CartViewControllerBrowsingState()
+        cartVC.state.enter(cartVC)
     }
     
 }

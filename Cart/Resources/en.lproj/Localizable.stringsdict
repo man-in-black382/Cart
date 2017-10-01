@@ -16,6 +16,8 @@
 			<string>%d товаров</string>
 			<key>one</key>
 			<string>%d товар</string>
+			<key>two</key>
+			<string>%d товара</string>
 			<key>few</key>
 			<string>%d товара</string>
 			<key>other</key>
