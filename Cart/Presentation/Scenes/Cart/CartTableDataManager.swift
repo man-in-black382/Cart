@@ -31,9 +31,7 @@ class CartTableDataManager: NSObject {
 
     // MARK: - Outlets
     
-    @IBOutlet private weak var tableView: UITableView! {
-        didSet { registerReusableViews() }
-    }
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     
@@ -64,6 +62,9 @@ extension CartTableDataManager {
     }
     
     func toggleEditingModeOn() {
+        // На случай, если пользователь свайпнул ячейку и включает редактирование
+        tableView.setEditing(false, animated: true)
+        
         multipliableProducts.enumerated().forEach { (arg) in
             let (index, multProduct) = arg
             multipliableProductRealIndices[multProduct.product] = index
@@ -107,10 +108,8 @@ extension CartTableDataManager {
 
 // MARK: - Private helpers
 extension CartTableDataManager {
-    private func registerReusableViews() {
-        let nib = UINib(nibName: String(describing: ProductCounterHeader.self), bundle: Bundle.main)
-        tableView.register(nib, forHeaderFooterViewReuseIdentifier: String(describing: ProductCounterHeader.self))
-    }
+    
+    // MARK: - UI
     
     private func setMultiplierViewHiddenForAllCells(_ hidden: Bool) {
         tableView.visibleCells.forEach {
@@ -130,6 +129,31 @@ extension CartTableDataManager {
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: CartTableSection.counter.rawValue)) as? ProductCounterCell
         cell?.configure(with: multipliableProducts)
     }
+    
+    // MARK: - Factory mothods
+    
+    private func productCell(at index: Int) -> ProductCell? {
+        let productCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProductCell.self)) as? ProductCell
+        productCell?.configure(with: multipliableProducts[index])
+        productCell?.decrementAction = { [weak self] cell in
+            guard let strongSelf = self, let row = strongSelf.tableView.indexPath(for: cell)?.row else { return }
+            strongSelf.setMultiplier(strongSelf.multipliableProducts[row].multiplier - 1, forProductAt: row)
+        }
+        productCell?.incrementAction = { [weak self] cell in
+            guard let strongSelf = self, let row = strongSelf.tableView.indexPath(for: cell)?.row else { return }
+            strongSelf.setMultiplier(strongSelf.multipliableProducts[row].multiplier + 1, forProductAt: row)
+        }
+        productCell?.setMultiplierViewHidden(isInEditingMode, animated: false)
+        return productCell
+    }
+    
+    private func counterCell() -> ProductCounterCell? {
+        let counterCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProductCounterCell.self)) as? ProductCounterCell
+        counterCell?.configure(with: multipliableProducts)
+        return counterCell
+    }
+    
+    // MARK: - Data manipulation
     
     private func removeProduct(at index: Int) {
         if isInEditingMode {
@@ -160,27 +184,6 @@ extension CartTableDataManager {
         let cell = tableView.cellForRow(at: path) as? ProductCell
         cell?.multiplier = multiplier
         updateCounterCell()
-    }
-    
-    private func productCell(at index: Int) -> ProductCell? {
-        let productCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProductCell.self)) as? ProductCell
-        productCell?.configure(with: multipliableProducts[index])
-        productCell?.decrementAction = { [weak self] cell in
-            guard let strongSelf = self, let row = strongSelf.tableView.indexPath(for: cell)?.row else { return }
-            strongSelf.setMultiplier(strongSelf.multipliableProducts[row].multiplier - 1, forProductAt: row)
-        }
-        productCell?.incrementAction = { [weak self] cell in
-            guard let strongSelf = self, let row = strongSelf.tableView.indexPath(for: cell)?.row else { return }
-            strongSelf.setMultiplier(strongSelf.multipliableProducts[row].multiplier + 1, forProductAt: row)
-        }
-        productCell?.setMultiplierViewHidden(isInEditingMode, animated: false)
-        return productCell
-    }
-    
-    private func counterCell() -> ProductCounterCell? {
-        let counterCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProductCounterCell.self)) as? ProductCounterCell
-        counterCell?.configure(with: multipliableProducts)
-        return counterCell
     }
     
     private func toggleEditingModeOff() {

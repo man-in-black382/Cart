@@ -12,7 +12,10 @@ class CartViewController: UIViewController {
 
     // MARK: - Outlets
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet { registerReusableViews() }
+    }
+    
     @IBOutlet weak var leftBarButton: CartBarButtonItem!
     @IBOutlet weak var rightBarButton: CartBarButtonItem!
     @IBOutlet weak var emptyCartView: UIView!
@@ -56,6 +59,11 @@ extension CartViewController {
         tableView.estimatedRowHeight = 500
         tableView.rowHeight = UITableViewAutomaticDimension
         view.bringSubview(toFront: emptyCartView)
+    }
+    
+    private func registerReusableViews() {
+        let nib = UINib(nibName: String(describing: ProductCounterHeader.self), bundle: Bundle.main)
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier: String(describing: ProductCounterHeader.self))
     }
 }
 

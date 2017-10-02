@@ -36,8 +36,7 @@ class ProductPool {
         guard products.count > 0 else { return nil }
         let index = Int(arc4random_uniform(UInt32(products.count)))
         
-        defer { products.remove(at: index) }
-        return products[index]
+        return products.remove(at: index)
     }
     
     func putProductBack(_ product: Product) {
