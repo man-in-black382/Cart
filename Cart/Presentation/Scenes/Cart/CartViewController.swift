@@ -74,5 +74,7 @@ extension CartViewController: CartDataManagerDelegate {
         if manager.multipliableProducts.isEmpty {
             emptyCartView.fadeIn()
         }
+        state = CartViewControllerBrowsingState()
+        state.enter(self)
     }
 }

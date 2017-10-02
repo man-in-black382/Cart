@@ -12,13 +12,14 @@ class CartViewControllerBrowsingState: CartViewControllerState {
     
     func enter(_ cartVC: CartViewController) {
         cartVC.leftBarButton.state = .add
-        cartVC.rightBarButton.state = .edit
+        cartVC.rightBarButton.state = cartVC.dataManager.multipliableProducts.isEmpty ? .idle : .edit
     }
     
     func performLeftBarButtonAction(_ cartVC: CartViewController) {
         if let product = cartVC.productPool.withdrawRandomProduct() {
             cartVC.dataManager.addProduct(product)
             cartVC.emptyCartView.fadeOut()
+            cartVC.rightBarButton.state = .edit
         } else {
             AlertFacade.showEmptyProductPoolAlert(on: cartVC)
         }
