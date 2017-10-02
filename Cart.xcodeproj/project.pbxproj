@@ -55,6 +55,8 @@
 		CE9D45131F7EBCFD0080021A /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		CEC427DB1F8223A000C896A0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		CEC427DC1F8223A000C896A0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEC427DD1F822C2B00C896A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		CEC427DE1F822C2F00C896A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEE22D721F7D292200408EC9 /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE22D751F7D292200408EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE22D7A1F7D292200408EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -218,7 +220,7 @@
 			};
 			buildConfigurationList = CEE22D6D1F7D292200408EC9 /* Build configuration list for PBXProject "Cart" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -285,6 +287,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEC427DB1F8223A000C896A0 /* ru */,
+				CEC427DD1F822C2B00C896A0 /* Base */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEC427DC1F8223A000C896A0 /* ru */,
+				CEC427DE1F822C2F00C896A0 /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
